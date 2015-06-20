@@ -8,7 +8,6 @@
   ],
   "repository": "git@github.com:michalbe/no-promise-dir-tree.git",
   "scripts": {
-    "test": "node tests/no-promise-dir-tree-tests.js",
     "lint": "node node_modules/jshint/bin/jshint ."
   },
   "pre-commit": [
