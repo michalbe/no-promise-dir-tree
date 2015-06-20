@@ -1,6 +1,5 @@
 'use strict';
 
-/* jshint esnext: true */
 var fs = require('fs'),
   Emitter = require('events').EventEmitter,
   emitter = new Emitter(),
