@@ -1,5 +1,6 @@
 # no-promise-dir-tree
-Creates a JavaScript object representing the directory structure of a given path. Without `Promise`s. Fork of [uniqname/dir-tree](git@github.com:uniqname/dir-tree.git).
+Creates a JavaScript object representing the directory structure of a given path. Without `Promise`s.
+Fork of [uniqname/dir-tree](git@github.com:uniqname/dir-tree.git).
 
 #API
 
