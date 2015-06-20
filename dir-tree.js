@@ -7,10 +7,7 @@ var fs = require('fs'),
 
   dirTree = function (path, ignoreGlob, cb) {
     var tree = {},
-      state,
-      callback = [].slice.call(arguments, -1)[0];
-
-    callback = (typeof callback === 'function') ? callback : undefined;
+      state;
 
     //TODO: implement igore globbing.
     ignoreGlob = ignoreGlob || 'node_modules';
@@ -35,10 +32,6 @@ var fs = require('fs'),
               // initialize the dynamic state machine (DSM).
               state = emitter.required(newEvents, function () {
                 // Allow for multiple paradigms vis-a-vis callback and promises.
-
-                // // if a callback was passed, execute it passing it the
-                // // completed tree.
-                // callback && callback(tree);
 
                 // resolve the promise with the completed tree..
                 cb(null, tree);
@@ -86,6 +79,6 @@ emitter.required = eventState;
 module.exports = dirTree;
 
 
-dirTree('./demo', null, function(err, tree){
+dirTree('../trekanten-game', null, function(err, tree){
   console.log(tree);
 });
