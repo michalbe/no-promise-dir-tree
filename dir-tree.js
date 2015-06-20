@@ -75,8 +75,3 @@ var fs = require('fs'),
 emitter.required = eventState;
 
 module.exports = dirTree;
-
-
-dirTree('../trekanten-game', function(err, tree){
-  console.log(tree);
-});
