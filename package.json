@@ -1,14 +1,13 @@
 {
   "name": "no-promise-dir-tree",
   "version": "0.0.1",
+  "description": "Creates an object representation of a directory tree begining at a given path. Without promises.",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
+  "contributors": [
+    "Cory Brown <oh.wise.man@gmail.com>"
+  ],
   "repository": "git@github.com:michalbe/no-promise-dir-tree.git",
-  "devDependencies": {
-    "assert": "^1.3.0",
-    "precommit-hook": "^3.0.0"
-  },
   "scripts": {
-    "test": "node tests/no-promise-dir-tree-tests.js",
     "lint": "node node_modules/jshint/bin/jshint ."
   },
   "pre-commit": [
@@ -16,7 +15,19 @@
     "validate",
     "test"
   ],
+  "main": "dir-tree.js",
+  "license": "ISC",
   "dependencies": {
-    "jshint": "^2.8.0"
+    "event-state": "^0.3.4"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "chalk": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-mocha": "^2.0.1",
+    "minimist": "^1.1.1",
+    "jshint": "^2.8.0",
+    "assert": "^1.3.0",
+    "precommit-hook": "^3.0.0"
   }
 }
