@@ -1,6 +1,6 @@
 {
   "name": "no-promise-dir-tree",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creates an object representation of a directory tree begining at a given path. Without promises.",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "contributors": [

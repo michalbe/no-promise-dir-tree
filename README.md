@@ -2,7 +2,7 @@
 Creates a JavaScript object representing the directory structure of a given path. Without `Promise`s.
 Fork of [uniqname/dir-tree](git@github.com:uniqname/dir-tree.git).
 
-#API
+# API
 
 ```
 dirTree = require('dir-tree', cb);
@@ -20,7 +20,7 @@ Given a directory structure of the following
     file3.js
 ```
 
-##Promises
+## Promises
 dirTree returns a promise that resolves with the directory tree object.
 
 ```
