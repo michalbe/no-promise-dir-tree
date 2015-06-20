@@ -1,30 +1,34 @@
 # no-promise-dir-tree
-Creates a JavaScript object representing the directory structure of a given path. Without `Promise`s.
+Creates a JavaScript object representing the directory structure of a given path. Without `Promise`s. Fork of [uniqname/dir-tree](git@github.com:uniqname/dir-tree.git).
 
 #API
 
 ```
-dirTree = require('dir-tree');
+dirTree = require('dir-tree', cb);
 ```
 
 Given a directory structure of the following
 
 ```
 /demo/
-     dir1/
-         file1.txt
-         dir2/
-     dir3/
-         file2.js
-     file3.js
+  dir1/
+    file1.txt
+   dir2/
+   dir3/
+    file2.js
+    file3.js
 ```
 
 ##Promises
 dirTree returns a promise that resolves with the directory tree object.
 
 ```
-dirTree('/demo').then(function (tree) {
-    console.log(tree);
+dirTree('/demo', function (err, tree) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(tree);
 });
 ```
 
@@ -32,22 +36,13 @@ The output of the above would be...
 
 ```
 {
-    'dir1': {
-        'file1.txt': true,
-        'dir2': {}
-    },
-    'dir3': {
-        'file2.js': true
-    },
-    'file3.js': true
+  'dir1': {
+    'file1.txt': true,
+    'dir2': {}
+  },
+  'dir3': {
+    'file2.js': true
+  },
+  'file3.js': true
 }
-```
-
-##Callbacks
-dirTree can also be passed a callback that will be called with the final directory tree as the only argument.
-
-```
-dirTree('/demo', function (tree) {
-    console.log(tree);
-});
 ```
