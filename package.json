@@ -15,5 +15,8 @@
     "lint",
     "validate",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "jshint": "^2.8.0"
+  }
 }
