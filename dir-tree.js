@@ -5,12 +5,10 @@ var fs = require('fs'),
   emitter = new Emitter(),
   eventState = require('event-state'),
 
-  dirTree = function (path, ignoreGlob, cb) {
+  dirTree = function (path, cb) {
     var tree = {},
       state;
 
-    //TODO: implement igore globbing.
-    ignoreGlob = ignoreGlob || 'node_modules';
     return buildBranch(path, tree);
 
 
@@ -79,6 +77,6 @@ emitter.required = eventState;
 module.exports = dirTree;
 
 
-dirTree('../trekanten-game', null, function(err, tree){
+dirTree('../trekanten-game', function(err, tree){
   console.log(tree);
 });
